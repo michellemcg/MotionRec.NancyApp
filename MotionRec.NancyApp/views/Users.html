@@ -1,0 +1,15 @@
+﻿@Master['shared/Master.html'];
+@Section['Title']
+View User Data
+@EndSection
+@Section['PageHeader']
+View User Data
+@EndSection
+@Section['Content']
+    @Each.Model      
+        <div class="item"><label class="label">ID:</label> @Current.Id</div>
+        <div class="item"><label class="label">FirstName:</label> @Current.FirstName</div>
+        <div class="item"><label class="label">LastName:</label> @Current.LastName</div>
+        <div class="item, last"><label class="label">Email:</label> @Current.Email</div>        
+    @EndEach
+@EndSection

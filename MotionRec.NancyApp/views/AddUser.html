@@ -1,0 +1,30 @@
+﻿@Master['shared/Master.html'];
+@Section['Title']
+Add User
+@EndSection
+
+@Section['PageHeader']
+Add User
+@EndSection
+
+@Section['Content']
+    <div class="msg">@Model.MessageToUser</div>
+
+    <form action="/user/add" method="post" class="form">
+        <div>
+            <label>First Name:</label>
+            <input id="FirstName" name="FirstName" value="@Model.User.FirstName" placeholder="First Name" />
+        </div>
+        <div>
+            <label>Last Name:</label>
+            <input id="LastName" name="LastName" value="@Model.User.LastName" placeholder="Last Name" />            
+        </div>
+        <div>
+            <label>Email:</label>
+            <input id="Email" name="Email" value="@Model.User.Email" placeholder="Email" />
+        </div>
+        <div>
+            <input type="submit" value="Add User" />
+        </div>
+    </form>
+@EndSection
